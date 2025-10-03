@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Terminal Dark Theme - Base Colors */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    
+    /* Card Colors */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    
+    /* Popover Colors */
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Blue Accent (Default) - Cyber Blue */
+    --primary: 213 94% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 213 94% 68%;
+    
+    /* Secondary Colors */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    
+    /* Muted Colors */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    
+    /* Accent - Terminal Green */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Red Accent Alternative */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-glow: 0 84% 70%;
+    
+    /* Border & Input */
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 213 94% 58%;
+    
+    /* Terminal Effects */
+    --terminal-green: 142 71% 45%;
+    --terminal-cyan: 187 71% 50%;
+    --terminal-yellow: 48 96% 53%;
+    
+    /* Shadows & Glows */
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+    --shadow-glow: 0 0 50px hsl(var(--primary-glow) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 0.75rem;
+  }
+  
+  /* Red Accent Theme */
+  [data-accent="red"] {
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 84% 70%;
+    --ring: 0 84% 60%;
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+    --shadow-glow: 0 0 50px hsl(var(--primary-glow) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
