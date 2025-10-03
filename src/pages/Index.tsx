@@ -22,7 +22,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p className="font-mono">
-              © 2024 D0p3W0lf. Built with React + Vite + Tailwind CSS
+              © 2024 Pa7n. Built with React + Vite + Tailwind CSS
             </p>
             <p className="font-mono text-terminal-cyan">
               <span className="text-terminal-green">$</span> Stay secure

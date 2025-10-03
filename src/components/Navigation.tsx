@@ -27,7 +27,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="font-mono text-lg font-bold text-primary">
-            <span className="text-terminal-green">$</span> D0p3W0lf
+            <span className="text-terminal-green">$</span> pa7n
           </div>
 
           {/* Desktop Navigation */}
