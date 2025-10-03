@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Button } from "./ui/button";
 import { ArrowRight, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile.png";
 import { useAccent } from "@/contexts/AccentContext";
 import { FallingCommands } from "./FallingCommands";
 import { useState, useEffect } from "react";
@@ -183,7 +183,7 @@ export const Hero = () => {
                 key={`quote-${accent}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 1 }}
+                transition={{ delay: 1.3, duration: 5 }}
                 className="text-sm md:text-base text-muted-foreground font-mono"
               >
                 {displayQuote}
@@ -218,8 +218,13 @@ export const Hero = () => {
                 variant="ghost"
                 className="text-terminal-cyan hover:text-terminal-cyan"
               >
+                <a 
+                  href={accent === "blue" ? "/path-to-your-blue-resume.pdf" : "/path-to-your-red-resume.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" />
-                Blue Resume
+                {accent === "blue" ? "Blue Resume" : "Red Resume"}
+                </a>
               </Button>
             </motion.div>
           </motion.div>
